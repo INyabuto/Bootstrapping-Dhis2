@@ -1,1 +1,1 @@
-Customization of dhis2 and API rest client for Data interchange between two instances of dhis2.
+Customization of dhis2 and API rest client (ETL tool) for Data Interchange between two instances of dhis2.
