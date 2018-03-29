@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1518936546099.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "232962EE",
+    "lastKnownWriteTime" : 1518936908,
+    "last_content_update" : 1518936908885,
+    "path" : "~/GIZ Work/Bootstrapping Dhis2/API Client.R",
+    "project_path" : "API Client.R",
+    "properties" : {
+        "cursorPosition" : "229,32",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

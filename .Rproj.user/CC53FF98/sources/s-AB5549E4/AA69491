@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1518936802895.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AA69491",
+    "lastKnownWriteTime" : 1520598807,
+    "last_content_update" : 1520598807283,
+    "path" : "~/GIZ Work/Bootstrapping Dhis2/dataExchange.R",
+    "project_path" : "dataExchange.R",
+    "properties" : {
+        "cursorPosition" : "80,19",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

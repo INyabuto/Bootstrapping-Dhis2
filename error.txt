@@ -1,0 +1,9 @@
+Dim 12:
+1. Layout:
+Generally data entry very efficient as the use have to go back and and forth inoder to verify data for entry. 
+There is alot of brain and energy used to navigate while filling in the forms.
+	i.e First you have to check the scoring guide for the avalilable scores, then select 
+	    the score and finally fill in the actual values.
+
+ 
+ "{\"httpStatus\":\"Internal Server Error\",\"httpStatusCode\":500,\"status\":\"ERROR\",\"message\":\"object references an unsaved transient instance - save the transient instance before flushing: org.hisp.dhis.organisationunit.OrganisationUnit\"}"

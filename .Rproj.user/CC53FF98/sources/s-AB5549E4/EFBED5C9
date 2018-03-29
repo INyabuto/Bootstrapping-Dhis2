@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1518936523402.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EFBED5C9",
+    "lastKnownWriteTime" : 1518578305,
+    "last_content_update" : 1518578305,
+    "path" : "~/GIZ Work/dhis2 data wrangling/dataexchange.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "54,13",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
