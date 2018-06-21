@@ -5,7 +5,7 @@ library(jsonlite)
 dest.url <- "http://192.168.0.128/dhis/"
 dest.user <- "admin"
 dest.pass <- "district"
-source.url <- "https://hiskenya.org/"
+source.url <- "https://localhost.org/"
 source.user <- "INyabuto"
 source.pass <- "Nyabuto12"
 
