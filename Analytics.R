@@ -3,7 +3,7 @@ library(jsonlite)
 #Login into the system 
 dest.url <- "http://192.168.0.198/dhis/"
 dest.user <- "admin"
-dest.pass <- "Bigups@12"
+dest.pass <- ""
 
 
 
