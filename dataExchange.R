@@ -1,14 +1,17 @@
 library(httr)
 library(jsonlite)
 library(rlist)
+library(keyringr)
 
 #Login into the system 
+dest <- "192.168.0.128"
 dest.url <- "http://192.168.0.128/dhis/"
-dest.user <- "admin"
-dest.pass <- "district"
+dest.user <- keyringr::get_kc_account(dest)
+dest.pass <- keyringr::get_kc_account(dest)
+source <- "hiskenya.org"
 source.url <- "https://hiskenya.org/"
-source.user <- "INyabuto"
-source.pass <- "Nyabuto12"
+source.user <- keyringr::get_kc_account(source)
+source.pass <- keyringr::decrypt_kc_pw(source)
 url3 <- ".json?paging=false&links=false"
 
 source("API Client.R")
