@@ -4,6 +4,15 @@ library(jsonlite)
 # a function that accepts types of metadata, url and property.url and return a dataframes of 
 # of the different metadata types (datatype)
 
+#'Get Metadata from the API
+#'
+#'@param base.url A base url
+#'@param datatype An resource in the API e.g dataElements
+#'@param property.url Specifies additional request parameters 
+#'@param usr A string with username
+#'@param pwd A string with password
+#'@return A list with the resquested resource
+
 getMetadata <- function(base.url, datatype, property.url, usr, pwd, ssl = FALSE){
     url2 <- datatype
     url <- paste0(base.url, url2, property.url)
@@ -96,10 +105,19 @@ getFocalOrgUnitsMeta <- function(organisationUnits.source, FocalCounties){
   return(org)
 }
 
-#'getDataValues is a function that interacts with dhis2 analycal API and provides data 
-#'for the last 12 monts by deafult.
-#'ou is a vector of organisation units id
-#'auth is a vector containing username and password
+
+
+#'Get the dataValues
+#'
+#'@param base.url A base url
+#'@param end.pont A resource to be queried
+#'@param dx A dataElement or Indicator id
+#'@param pe A period 
+#'@param ou An orgUnit id 
+#'@param propertry.url Additonal parameters to be included in the url
+#'@param usr
+#'@param pwd
+#'@return a dataframe with the data
 getDataValues <- function(base.url, end.point = "analytics.json?", dx, pe = "LAST_12_MONTHS", ou, property.url="displayProperty=NAME&skipMeta=TRUE", usr, pwd, ssl = TRUE){
   urlA <- paste0(base.url, end.point)
   urlB <- paste0("dimension=dx:", dx)
@@ -249,7 +267,16 @@ remapDataValue <- function(data.value, data.dict, org.ref){
 }
 
 
-# 
+#'Post dataValues
+#'
+#'@param base.url A base url
+#'@param end.pont A resource to be queried
+#'@param data A dataframe with data
+#'@param datatype A resource to be updated
+#'@param propertry.url Additonal parameters to be included in the url
+#'@param usr
+#'@param pwd
+#'@return HTTP response
 postDataValues <- function(base.url, data, datatype, endpoint = "dataValueSets?", property.url = "preheatCache=true&skipExistingCheck=true", ssl = FALSE, usr, pwd){
   url <- paste0(base.url, endpoint, property.url)
   r <- POST(url,
