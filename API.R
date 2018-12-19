@@ -1,13 +1,16 @@
 library(httr)
 library(jsonlite)
+library(keyringr)
 
-#Login into the system 
+#Login into the system
+dest <- "192.168.0.128/"
 dest.url <- "http://192.168.0.128/dhis/"
-dest.user <- "admin"
-dest.pass <- "district"
+dest.user <- keyringr::get_kc_account(dest)
+dest.pass <- keyringr::decrypt_kc_pw(dest)
+source <- "localhost.org"
 source.url <- "https://localhost.org/"
-source.user <- "INyabuto"
-source.pass <- "Nyabuto12"
+source.user <- keyringr::get_kc_account(source)
+source.pass <- keyringr::decrypt_kc_pw(source)
 
 # Generation of UIDs
 generateUID <- function(codeSize=11){
