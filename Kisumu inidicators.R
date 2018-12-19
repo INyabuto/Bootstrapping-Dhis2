@@ -2,31 +2,34 @@ library(httr)
 library(jsonlite)
 library(rlist)
 
+
 #Login into the system 
-dest.url <- "http://192.168.1.124/dhis/"
-dest.user <- "admin"
-dest.pass <- "district"
+dest <- "192.168.0.128"
+dest.url <- "http://192.168.0.128/dhis/"
+dest.user <- keyringr::get_kc_account(dest)
+dest.pass <- keyringr::get_kc_account(dest)
+source <- "hiskenya.org"
 source.url <- "https://hiskenya.org/"
-source.user <- "INyabuto"
-source.pass <- "Nyabuto12"
+source.user <- keyringr::get_kc_account(source)
+source.pass <- keyringr::decrypt_kc_pw(source)
 url3 <- ".json?paging=false&links=false"
 
-
+# login
 loginDhis2 <- function(base.url, usr, pwd){
   url <- paste0(base.url, "api/me")
   r <- GET(url, authenticate(usr,pwd))
   assertthat::assert_that(r$status_code == 200)
 }
+
 #login
 startTime <- Sys.time()
 loginDhis2(dest.url, dest.user, dest.pass)
 
 
-
 r <- GET("http://192.168.1.124/dhis/api/27/dataElementGroups", authenticate(dest.user,dest.pass))
 d <- fromJSON(content(r,"text"))
 
-#Extract data values from the national instance that matches. 
+#Extract data values from the sourcel instance that matches. 
 # dataElements
 pb <- winProgressBar(title = "Kenya - dhis2 acedemy data exchange (pull & push)",
                      label = "0% done",
